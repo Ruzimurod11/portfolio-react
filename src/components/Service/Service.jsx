@@ -16,7 +16,6 @@ const Service = () => {
       }
       setActive(i);
    };
-   console.log(active);
    return (
       <div className={`section ${s.ServiceWrapper}`}>
          <div className={s.Service_Top_container}>

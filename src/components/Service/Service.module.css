@@ -81,9 +81,8 @@
 .serviceContent p {
    width: 60%;
    margin-bottom: 30px;
+   color: var(--text-color);
 }
-
-/* service_Questions_Wrapper */
 
 .service_Questions_Wrapper {
    width: 50%;
