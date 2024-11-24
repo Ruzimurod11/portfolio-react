@@ -1,0 +1,197 @@
+.footerWrapper {
+   align-items: center;
+   background-color: var(--bg-color-header-2);
+   position: relative;
+   gap: 5px;
+   overflow: hidden;
+}
+
+.footerWrapper::after {
+   content: "";
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background: url(assets/Images/distort-bg.png);
+   background-size: contain;
+   z-index: -1;
+}
+
+.footerWrapper::before {
+   content: "";
+   position: absolute;
+   top: 0;
+   left: 0;
+   height: 400px;
+   width: 400px;
+   filter: blur(190px);
+   background-color: rgba(132, 153, 78, 0.8);
+   z-index: 22;
+}
+
+.footerWrapper h1 {
+   font-size: 80px;
+   color: var(--text-color);
+   width: 90%;
+   line-height: 100%;
+   text-align: center;
+}
+
+.buttons {
+   width: 100%;
+   display: flex;
+   gap: 30px;
+   align-items: center;
+   justify-content: center;
+   margin-top: 30px;
+}
+
+.buttons button {
+   height: 120px;
+   width: 100%;
+   border-radius: 100px;
+   font-size: 28px;
+   font-weight: 700;
+   border: none;
+   cursor: pointer;
+   transition: 0.6s;
+}
+
+.buttons button:hover {
+   background-color: #1e1e1e;
+   color: #fff;
+}
+
+.buttons button:nth-child(1) {
+   background-color: var(--marqueeColor);
+   color: #fff;
+}
+
+.socialMedia {
+   width: 100%;
+   display: flex;
+   justify-content: space-between;
+   gap: 30px;
+   flex-wrap: wrap;
+
+   align-items: center;
+   height: 100%;
+   margin-top: 50px;
+}
+
+.socialMedia .Social {
+   max-width: 33%;
+   width: 30%;
+   height: 90px;
+   display: flex;
+   justify-content: space-between;
+
+   align-items: center;
+   padding: 20px;
+   border-top: 2px solid var(--text-color);
+   position: relative;
+   z-index: 1;
+}
+
+.socialMedia .Social::after {
+   content: "";
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 0%;
+   background-color: var(--marqueeColor);
+   transition: 0.6s;
+   z-index: -1;
+}
+
+.socialMedia .Social:hover:after {
+   height: 100%;
+}
+
+.socialMedia .Social h2 {
+   font-size: 28px;
+   transition: 0.6s;
+   color: var(--text-color);
+}
+
+.socialMedia .Social:hover h2 {
+   filter: invert(100%);
+}
+
+.socialMedia .Social h2 span {
+   display: block;
+   font-size: 14px;
+   color: var(--paragraph-color);
+   font-weight: 300;
+}
+
+.socialMedia .Social i {
+   height: 50px;
+   width: 50px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   background-color: var(--tool-bg-color);
+   font-weight: 500;
+   font-size: 24px;
+   border-radius: 50%;
+   color: var(--text-color);
+   border: 0.5px solid var(--tool-border-color);
+   transition: 0.6s;
+}
+
+.socialMedia .Social:hover i {
+   filter: invert(100%);
+}
+
+.shape {
+   position: absolute;
+   height: 1000px;
+   width: 1000px;
+   border-radius: 50%;
+   top: 90%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   background: linear-gradient(0deg, transparent, var(--tool-bg-color));
+   z-index: -1;
+}
+
+@media (max-width: 1400px) {
+   .footerWrapper h1 {
+      font-size: 120px;
+   }
+}
+
+@media (max-width: 1200px) {
+   .footerWrapper h1 {
+      font-size: 100px;
+   }
+}
+
+@media (max-width: 900px) {
+   .footerWrapper h1 {
+      font-size: 75px;
+   }
+
+   .socialMedia .Social {
+      max-width: none;
+      width: 100%;
+   }
+
+   .buttons button {
+      height: 90px;
+      margin: 30px 0;
+   }
+}
+
+@media (max-width: 768px) {
+   .footerWrapper h1 {
+      font-size: 68px;
+   }
+
+   .buttons {
+      flex-direction: column;
+   }
+}

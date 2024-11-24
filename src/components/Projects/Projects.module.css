@@ -1,0 +1,169 @@
+.ProjectWrapper {
+   background-color: var(--bg-color-header);
+   overflow: hidden;
+   flex-direction: row;
+   justify-content: space-between;
+   position: relative;
+}
+
+.ProjectWrapper .projectLeftContainer,
+.ProjectWrapper .projectRightContainer {
+   display: flex;
+   flex-direction: column;
+   gap: 50px;
+   align-items: start;
+   padding: 0 30px;
+   padding-top: 130px;
+}
+
+.ProjectWrapper .projectLeftContainer .Title {
+   display: flex;
+   flex-direction: column;
+   gap: 10px;
+}
+
+.ProjectWrapper .projectLeftContainer .Title h2 {
+   font-size: 30px;
+   font-weight: 700;
+   color: var(--text-color);
+}
+
+.ProjectWrapper .Image {
+   height: 700px;
+   width: 500px;
+}
+
+.ProjectWrapper .Image .ProjectImg {
+   height: 90%;
+   width: 100%;
+   border-radius: 8px;
+   transition: 0.6s;
+   overflow: hidden;
+}
+
+.ProjectWrapper .Image:hover .ProjectImg {
+   transform: scale(0.95);
+}
+
+.ProjectImg .Image .ProjectImg img {
+   height: 100%;
+   width: 100%;
+   border-radius: 8px;
+   transition: 0.6s;
+   overflow: hidden;
+}
+
+.ProjectWrapper .Image:hover .ProjectImg img {
+   transform: scale(1.2);
+}
+
+.ProjectWrapper .Image h4 {
+   font-size: 16px;
+   margin-bottom: 30px;
+   margin-top: 20px;
+   color: var(--text-color);
+   font-weight: 300;
+}
+
+/* button */
+.ProjectWrapper button {
+   height: 120px;
+   width: 120px;
+   border: 0.2px solid rgba(131, 131, 131, 0.3);
+   background-color: transparent;
+   font-size: 18px;
+   line-height: 120%;
+   font-weight: 600;
+   border-radius: 50%;
+   color: var(--text-color);
+   margin-left: 60px;
+   margin-top: 30px;
+   text-align: center;
+   position: relative;
+   z-index: 1;
+}
+
+.ProjectWrapper button::after {
+   content: "";
+   position: absolute;
+   top: 0;
+   left: 0;
+   height: 100%;
+   width: 100%;
+   background-color: #bce706;
+   border-radius: 50%;
+   z-index: -1;
+   clip-path: circle(40% at 100% 100%);
+   transition: 0.6s;
+}
+
+.ProjectWrapper button:hover:after {
+   clip-path: circle(120% at 100% 100%);
+}
+
+.ProjectWrapper button:hover {
+   color: #2a2525;
+   font-weight: 800;
+}
+/* /button */
+
+.projectRightContainer {
+   width: 50%;
+}
+
+.marquee {
+   background: none;
+}
+
+.marqueeTxt {
+   display: flex;
+   gap: 80px;
+}
+
+.marqueeTxt h1 {
+   font-size: 135px;
+   color: transparent;
+   -webkit-text-stroke-width: 1px;
+   -webkit-text-stroke-color: var(--text-color);
+   font-weight: 200;
+   font-family: "Abril Fatface";
+   opacity: 0.2;
+}
+
+@media (max-width: 1400px) {
+   .ProjectWrapper .Image {
+      width: 100%;
+   }
+
+   .ProjectWrapper .projectRightContainer {
+      padding: 0;
+   }
+}
+
+@media (max-width: 1100px) {
+   .ProjectWrapper .Image {
+      height: 500px;
+   }
+
+   .ProjectWrapper .projectRightContainer {
+      padding: 0;
+   }
+}
+
+@media (max-width: 768px) {
+   .ProjectWrapper {
+      flex-direction: column;
+   }
+
+   .projectRightContainer {
+      width: 100%;
+   }
+
+   .ProjectWrapper .Image {
+      height: 700px;
+   }
+}
+
+.ProjectWrapper button {
+   margin-left: 0;
+}

@@ -1,0 +1,118 @@
+.awardsWrapper {
+   flex-direction: row;
+   background-color: var(--bg-color-header);
+   position: relative;
+}
+
+.awardsWrapper::after {
+   content: "Awards";
+   position: absolute;
+   top: 60%;
+   left: 10%;
+   font-size: 150px;
+   font-weight: 500;
+   color: transparent;
+   -webkit-text-stroke-width: 1px;
+   -webkit-text-stroke-color: var(--text-color);
+   opacity: 0.2;
+   font-family: "Abril Fatface";
+}
+
+.awardsWrapper h1 {
+   font-size: 50px;
+   font-weight: 700;
+   color: var(--text-color);
+}
+
+.Content {
+   width: 50%;
+}
+
+.AwardsContainer {
+   width: 50%;
+   display: flex;
+   flex-direction: column;
+   gap: 30px;
+}
+
+.AwardsContainer .Awards {
+   display: flex;
+   justify-content: space-between;
+   padding-bottom: 30px;
+   padding-top: 30px;
+   border-bottom: 0.2px solid var(--border-color);
+   position: relative;
+   z-index: 99;
+}
+
+.AwardsContainer .Awards img {
+   position: absolute;
+   top: 20%;
+   right: 30%;
+   height: 180px;
+   width: 130px;
+   border-radius: 8px;
+   transform: rotate(30deg);
+   opacity: 0;
+   transition: 0.6s;
+}
+
+.AwardsContainer .Awards:hover img {
+   opacity: 1;
+   transform: rotate(-10deg);
+}
+
+.AwardsContainer .Awards h4 {
+   font-size: 30px;
+   font-weight: 700;
+   color: var(--text-color);
+}
+
+.AwardsContainer .Awards h4 span {
+   display: block;
+   font-size: 15px;
+   margin-top: 8px;
+   font-weight: 300;
+   color: var(--paragraph-color);
+}
+
+.AwardsContainer .Awards i {
+   height: 50px;
+   width: 50px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   background-color: var(--tool-bg-color);
+   font-size: 1.3rem;
+   border-radius: 50%;
+   transform: rotate(-30deg);
+   color: var(--text-color);
+   transition: 0.6s;
+}
+
+.AwardsContainer .Awards:hover i {
+   transform: rotate(0deg);
+}
+
+@media (max-width: 1400px) {
+   .awardsWrapper::after {
+      font-size: 130px;
+   }
+}
+
+@media (max-width: 768px) {
+   .awardsWrapper {
+      flex-direction: column;
+   }
+
+   .AwardsContainer {
+      width: 100%;
+      margin-top: 60px;
+   }
+
+   .awardsWrapper::after {
+      font-size: 65px;
+      left: 52%;
+      top: 2%;
+   }
+}

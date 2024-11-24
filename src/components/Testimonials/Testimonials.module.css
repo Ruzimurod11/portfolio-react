@@ -1,0 +1,76 @@
+.testimonialWrapper {
+   background-color: var(--bg-color-header);
+}
+
+.TestimonialContainer {
+   border-bottom: 2px solid var(--border-color);
+   padding-bottom: 60px;
+}
+
+.testimonialWrapper h1 {
+   font-size: 68px;
+   font-weight: 700;
+   color: var(--text-color);
+}
+
+.testimonialWrapper p {
+   font-size: 18px;
+   font-weight: 400;
+   color: var(--paragraph-color);
+}
+
+.TestimonialProfileCard {
+   display: flex;
+   align-items: center;
+}
+
+.TestimonialProfileCard span {
+   display: block;
+   font-size: 15px;
+   letter-spacing: 1;
+   color: var(--paragraph-color);
+}
+
+.TestimonialProfileCard h4 {
+   font-size: 18px;
+   font-weight: 400;
+   color: var(--text-color);
+}
+
+.TestimonialContentCard {
+   height: 300px;
+   width: 100%;
+   padding: 30px;
+   background: url(assets/Images/distort-bg.png);
+   border: 0.5px solid var(--border-color);
+   background-size: contain;
+   border-radius: 12px;
+   margin-bottom: 30px;
+   margin-top: 60px;
+}
+
+.TestimonialContentCard img {
+   position: absolute;
+   top: 60%;
+   right: 12%;
+   filter: invert(var(--invert));
+}
+
+.TestimonialContentCard p {
+   font-size: 22px;
+   font-weight: 300;
+   color: var(--text-color);
+}
+
+.TestimonialProfileCard img {
+   width: 60px;
+   height: 60px;
+   margin-right: 30px;
+   border-radius: 50%;
+}
+
+@media (max-width: 768px) {
+   .TestimonialContentCard img {
+      display: none;
+   }
+}
